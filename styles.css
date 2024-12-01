@@ -1,0 +1,110 @@
+/* Añade esto a un archivo styles.css o en un bloque <style> en tu HTML */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+li {
+    background-color: #fff68f; /* Color de post-it */
+    border: 1px solid #e3c565;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 200px;
+    height: 200px;
+    font-size: 16px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transform: rotate(-2deg); /* Pequeña inclinación */
+    position: relative;
+}
+
+li:hover {
+    transform: rotate(0deg);
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    background-color: #000;
+    opacity: 0.2;
+    border-radius: 5px;
+}
+
+#crear, #anadir {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+#crear:hover, #anadir:hover {
+    background-color: #45a049;
+}
+
+#panelNota {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.eliminar {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.eliminar:hover {
+    background-color: #e60000;
+}
+
+.nota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
